@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/fav_icon.webp" type="image/png" />
+    <title>Society of Economic Geologists & Mineral Technologists</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <%- include("./components/header") %>
+
+    <div class="sm:px-4 py-6 px-2">
+      <main class="container mx-auto">
+        <!-- Current Page Navigate -->
+        <div class="p-4 shadow-sm rounded-sm bg-white flex gap-2 uppercase font-medium text-sm">
+          <a href="/" class="cursor-pointer hover:text-[#85082b]">Home</a> / <a href="/about" class="cursor-pointer hover:text-[#85082b]">About</a> /
+          <a href="/past-events" class="cursor-pointer hover:text-[#85082b]">Past Events</a>
+        </div>
+        <!-- About Us -->
+        <div class="mt-6 bg-white rounded-sm md:p-8 p-4 shadow-xs">
+          <section>
+            <h1 class="text-[#85082b] font-semibold xl:text-2xl text-xl mb-4">Past Events</h1>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <%- include("./components/footer") %>
+  </body>
+</html>

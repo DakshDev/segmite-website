@@ -1,0 +1,30 @@
+<div
+  id="committee_members"
+  class="flex gap-5 justify-start items-center overflow-x-auto mt-4 p-2"
+></div>
+
+<script>
+  const committeeMembersNode = document.getElementById("committee_members");
+  const committee_members = [
+    { src: "/images/boy.png", name: "Committee Member Full Name" },
+    { src: "/images/girl.png", name: "Committee Member Full Name" },
+    { src: "/images/boy.png", name: "Committee Member Full Name" },
+    { src: "/images/girl.png", name: "Committee Member Full Name" },
+    { src: "/images/girl.png", name: "Committee Member Full Name" },
+    { src: "/images/boy.png", name: "Committee Member Full Name" },
+    { src: "/images/girl.png", name: "Committee Member Full Name" },
+  ];
+  committee_members.forEach((data) => {
+    let html = `<div class="w-60 shrink-0 p-4 rounded-sm bg-white">
+  <img
+    src="${data.src}"
+    alt="Committee"
+    class="size-40 rounded-full object-cover object-center mx-auto"
+  />
+  <p class="mt-2 capitalize font-extralight text-lg text-center text-[#333]">
+    ${data.name}
+  </p>
+</div>`;
+    committeeMembersNode.insertAdjacentHTML("afterbegin", html);
+  });
+</script>

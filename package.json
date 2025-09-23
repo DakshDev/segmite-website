@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "npx @tailwindcss/cli -i ./src/css/style.css -o ./public/css/main.css --watch",
+    "start": "node src/index.js",
+    "dev": "concurrently \"npm run css\" \"npx nodemon\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.5",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "ejs-lint": "^2.0.1",
+    "nodemon": "^3.1.10"
+  }
+}

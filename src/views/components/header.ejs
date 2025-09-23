@@ -1,0 +1,414 @@
+<div class="bg-[#85082b] py-1 sm:px-4 px-2">
+  <div class="container mx-auto flex justify-between gap-5">
+    <h1 class="capitalize font-medium text-white" id="date-display"></h1>
+  </div>
+</div>
+
+<header class="py-4 sm:px-4 px-2 bg-[#f1f1f1]">
+  <div class="flex justify-between gap-5 items-center container mx-auto">
+    <img src="/images/segmite.webp" alt="Segmite Logo" class="sm:size-30 size-25" />
+    <h2 class="text-xl font-semibold capitalize text-[#85082b] sm:w-80 w-60">Society of Economic Geologists and Mineral Technologists</h2>
+  </div>
+</header>
+
+<div nav-stop-propagation class="bg-[#85082b] shadow-md sticky z-50 top-0 left-0 sm:px-4 px-2 max-md:py-2">
+  <!-- Desktop -->
+  <nav class="container mx-auto flex items-center justify-between gap-5">
+    <div id="main-target-menu" class="size-10 p-2 rounded-sm bg-white shrink-0 cursor-pointer md:hidden" onclick="isVisibleMobileMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify-icon lucide-text-align-justify">
+        <path d="M3 5h18" />
+        <path d="M3 12h18" />
+        <path d="M3 19h18" />
+      </svg>
+    </div>
+    <div class="text-sm uppercase flex gap-x-6 items-center tracking-wider flex-wrap container mx-auto max-md:hidden whitespace-nowrap">
+      <a class="nav-menu cursor-pointer h-14 flex items-center text-white" href="/">Home</a>
+      <!-- About us -->
+      <div class="relative" id="about-menu-target">
+        <a class="nav-menu cursor-pointer h-14 flex items-center text-white gap-1" href="/about"
+          >About us
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </a>
+        <div id="about-main-menu" style="display: none" class="bg-white w-70 absolute top-full left-0 shadow-xl border-x border-[#d4d4d4] h-fit grid z-10">
+          <a href="/about" class="p-2 px-4 border-t border-[#d4d4d4] hover:bg-gray-50 whitespace-break-spaces">About <span class="font-semibold">(Society of Economic Geologists and Mineral Technologists)</span></a>
+          <a href="/about/main-activities" class="p-2 px-4 border-t border-[#d4d4d4] hover:bg-gray-50 whitespace-break-spaces">Main Activities</a>
+          <a href="/about/management" class="p-2 px-4 border-t border-[#d4d4d4] hover:bg-gray-50 whitespace-break-spaces">Management</a>
+          <a href="/about/contact-and-other-info" class="p-2 px-4 border-t border-[#d4d4d4] hover:bg-gray-50 whitespace-break-spaces">Contact and Other Information</a>
+        </div>
+      </div>
+      <!-- MemberShip -->
+      <div class="relative" id="membership-menu-target">
+        <a class="nav-menu cursor-pointer h-14 flex items-center text-white gap-1" href="/membership"
+          >Membership
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </a>
+        <div id="membership-main-menu" style="display: none" class="bg-white absolute top-full left-0 shadow-xl border-x border-[#d4d4d4] h-fit grid z-10">
+          <a href="/membership" class="p-2 px-4 border-t border-[#d4d4d4] whitespace-nowrap hover:bg-gray-50">Membership Categories</a>
+          <a href="/membership/form" class="p-2 px-4 border-t border-[#d4d4d4] whitespace-nowrap hover:bg-gray-50">Membership Form</a>
+          <a href="/membership/life-member" class="p-2 px-4 border-t border-[#d4d4d4] whitespace-nowrap hover:bg-gray-50">Life Members</a>
+        </div>
+      </div>
+      <!-- Organization -->
+      <div class="relative" id="organization-menu-target">
+        <span class="nav-menu cursor-pointer h-14 flex items-center text-white gap-1"
+          >Organization
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </span>
+        <div id="organization-main-menu" style="display: none" class="bg-white absolute top-full left-0 shadow-xl border-x border-[#d4d4d4] h-fit grid z-10">
+          <a href="/organization/editorial-board" class="p-2 px-4 border-t border-[#d4d4d4] whitespace-nowrap hover:bg-gray-50">Editorial Board Members of the Journal</a>
+          <a href="/organization/members-board" class="p-2 px-4 border-t border-[#d4d4d4] whitespace-nowrap hover:bg-gray-50">Members Board of Directors of SEGMITE</a>
+        </div>
+      </div>
+      <!-- Download -->
+      <div class="relative" id="Activities-menu-target">
+        <span class="nav-menu cursor-pointer h-14 flex items-center text-white gap-1"
+          >DOWNLOAD
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </span>
+        <div id="Activities-main-menu" style="display: none" class="bg-white absolute top-full left-0 shadow-xl border-x border-[#d4d4d4] h-fit grid z-10">
+          <a href="/journals" class="p-2 px-4 border-t border-[#d4d4d4] whitespace-nowrap hover:bg-gray-50">Journal</a>
+          <a href="/publications" class="p-2 px-4 border-t border-[#d4d4d4] whitespace-nowrap hover:bg-gray-50">Publications</a>
+          <a href="/videos" class="p-2 px-4 border-t border-[#d4d4d4] whitespace-nowrap hover:bg-gray-50">Videos</a>
+        </div>
+      </div>
+      <a class="nav-menu cursor-pointer h-14 flex items-center text-white" href="/past-events">PAST EVENTS</a>
+      <a class="nav-menu cursor-pointer h-14 flex items-center text-white" href="/activities">ACTIVITIES / ANNOUNCEMENTS</a>
+      <a class="nav-menu cursor-pointer h-14 flex items-center text-white" href="/contact">Contact</a>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu-box" class="bg-white rounded-sm shadow-2xl z-50 absolute left-0 h-0 top-full w-full grid overflow-hidden duration-500 transition-all ease-in-out">
+    <a href="/" class="py-2 px-4 border-b-2 hover:bg-gray-100 font-medium text-[#333] border-[#ddd]">Home</a>
+    <!-- About -->
+    <div class="border-b text-[#333] border-[#ddd] grid">
+      <div id="mobile-about-menu-target" class="py-2 px-4 border-b hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex justify-between items-center">
+        <span>About Us</span>
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </div>
+      <div id="mobile-about-main-menu" class="h-0 overflow-hidden bg-gray-100">
+        <a href="/about" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          About (Society of Economic Geologists and Mineral Technologists)
+        </a>
+        <a href="/about/main-activities" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Main Activities
+        </a>
+        <a href="/about/management" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Management
+        </a>
+        <a href="/about/contact-and-other-info" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Contact And Other Info
+        </a>
+      </div>
+    </div>
+    <!-- Membership -->
+    <div class="border-b text-[#333] border-[#ddd] grid">
+      <div id="mobile-membership-menu-target" class="py-2 px-4 border-b hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex justify-between items-center">
+        <span>Member Ship</span>
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </div>
+      <div id="mobile-membership-main-menu" class="h-0 overflow-hidden bg-gray-100">
+        <a href="/membership" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Membership Categories
+        </a>
+        <a href="/membership/form" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Membership Form
+        </a>
+        <a href="/membership/life-member" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Life Member
+        </a>
+      </div>
+    </div>
+    <!-- Organization -->
+    <div class="border-b text-[#333] border-[#ddd] grid">
+      <div id="mobile-organization-menu-target" class="py-2 px-4 border-b hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex justify-between items-center">
+        <span>Organization</span>
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </div>
+      <div id="mobile-organization-main-menu" class="h-0 overflow-hidden bg-gray-100">
+        <a href="/organization/editorial-board" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Editorial Board Members of the Journal
+        </a>
+        <a href="/organization/members-board" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Members Board of Directors of SEGMITE
+        </a>
+      </div>
+    </div>
+    <!-- Downloads -->
+    <div class="border-b text-[#333] border-[#ddd] grid">
+      <div id="mobile-activities-menu-target" class="py-2 px-4 border-b hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex justify-between items-center">
+        <span>Download</span>
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </div>
+      <div id="mobile-activities-main-menu" class="h-0 overflow-hidden bg-gray-100">
+        <a href="/journals" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Journals
+        </a>
+        <a href="/publications" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Publications
+        </a>
+        <a href="/videos" class="border-b py-2 px-6 hover:bg-gray-100 font-medium text-[#333] border-[#ddd] flex gap-2 items-center">
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right">
+            <path d="m15 10 5 5-5 5" />
+            <path d="M4 4v7a4 4 0 0 0 4 4h12" />
+          </svg>
+          Videos
+        </a>
+      </div>
+    </div>
+    <a href="/past-events" class="py-2 px-4 border-b-2 hover:bg-gray-100 font-medium text-[#333] border-[#ddd]">PAST EVENTS</a>
+    <a href="/activities" class="py-2 px-4 border-b-2 hover:bg-gray-100 font-medium text-[#333] border-[#ddd]">ACTIVITIES / ANNOUNCEMENTS</a>
+    <a href="/contact" class="py-2 px-4 border-b-2 hover:bg-gray-100 font-medium text-[#333] border-[#ddd]">Contact</a>
+  </div>
+</div>
+
+<!-- ======================================= -->
+<!-- Javascript -->
+<!-- ======================================= -->
+<script>
+  let months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+  const date = new Date();
+  const format = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+  document.getElementById("date-display").innerText = format;
+
+  // main-target-menu
+  const mainTargetMenu = document.getElementById("main-target-menu");
+  let barSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-justify-icon lucide-text-align-justify"><path d="M3 5h18"/><path d="M3 12h18"/><path d="M3 19h18"/></svg>`;
+  let closeSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`;
+
+  // Mobile Menu Logic ========================================
+  document.body.addEventListener("click", () => {
+    closeOrganizationMobileMenu();
+    closeMembershipMobileMenu();
+    closeAboutMobileMenu();
+    closeActivitiesMobileMenu();
+    closeMobileMenu();
+    mainTargetMenu.innerHTML = barSvg;
+    mainTargetMenu.style.cssText = "";
+  });
+  document.querySelector("[nav-stop-propagation]").addEventListener("click", (e) => e.stopPropagation());
+  const mobileMenuBox = document.getElementById("mobile-menu-box");
+  function closeMobileMenu() {
+    const style = window.getComputedStyle(mobileMenuBox);
+    if (style.height != "0px") {
+      mobileMenuBox.style.height = `0px`;
+    }
+  }
+  function isVisibleMobileMenu() {
+    const style = window.getComputedStyle(mobileMenuBox);
+    console.log(style.height);
+    if (style.height === "0px") {
+      mobileMenuBox.style.height = `fit-content`;
+      mainTargetMenu.innerHTML = closeSvg;
+      mainTargetMenu.style.cssText = "color: #85082b";
+    } else {
+      closeOrganizationMobileMenu();
+      closeMembershipMobileMenu();
+      closeAboutMobileMenu();
+      closeActivitiesMobileMenu();
+      mobileMenuBox.style.height = `0px`;
+      mainTargetMenu.innerHTML = barSvg;
+      mainTargetMenu.style.cssText = "";
+    }
+  }
+  // About
+  const mobile_about_menu_target = document.getElementById("mobile-about-menu-target");
+  const mobile_about_main_menu = document.getElementById("mobile-about-main-menu");
+  mobile_about_menu_target.addEventListener("click", () => {
+    if (window.getComputedStyle(mobile_about_main_menu).height == "0px") {
+      closeMembershipMobileMenu();
+      closeOrganizationMobileMenu();
+      closeActivitiesMobileMenu();
+      mobile_about_main_menu.style.height = "fit-content";
+      mobile_about_menu_target.lastElementChild.style.transform = "rotate(180deg)";
+    } else {
+      closeAboutMobileMenu();
+    }
+  });
+  function closeAboutMobileMenu() {
+    if (window.getComputedStyle(mobile_about_main_menu).height != "0px") {
+      mobile_about_main_menu.style.height = "0px";
+      mobile_about_menu_target.lastElementChild.style.transform = "rotate(0deg)";
+    }
+  }
+  // Membership
+  const mobile_membership_menu_target = document.getElementById("mobile-membership-menu-target");
+  const mobile_membership_main_menu = document.getElementById("mobile-membership-main-menu");
+  mobile_membership_menu_target.addEventListener("click", () => {
+    if (window.getComputedStyle(mobile_membership_main_menu).height == "0px") {
+      closeAboutMobileMenu();
+      closeOrganizationMobileMenu();
+      closeActivitiesMobileMenu();
+      mobile_membership_main_menu.style.height = "fit-content";
+      mobile_membership_menu_target.lastElementChild.style.transform = "rotate(180deg)";
+    } else {
+      closeMembershipMobileMenu();
+    }
+  });
+  function closeMembershipMobileMenu() {
+    if (window.getComputedStyle(mobile_membership_main_menu).height != "0px") {
+      mobile_membership_main_menu.style.height = "0px";
+      mobile_membership_menu_target.lastElementChild.style.transform = "rotate(0deg)";
+    }
+  }
+  // Organization
+  const mobile_organization_menu_target = document.getElementById("mobile-organization-menu-target");
+  const mobile_organization_main_menu = document.getElementById("mobile-organization-main-menu");
+  mobile_organization_menu_target.addEventListener("click", () => {
+    if (window.getComputedStyle(mobile_organization_main_menu).height == "0px") {
+      closeAboutMobileMenu();
+      closeMembershipMobileMenu();
+      closeActivitiesMobileMenu();
+      mobile_organization_main_menu.style.height = "fit-content";
+      mobile_organization_menu_target.lastElementChild.style.transform = "rotate(180deg)";
+    } else {
+      closeOrganizationMobileMenu();
+    }
+  });
+  function closeOrganizationMobileMenu() {
+    if (window.getComputedStyle(mobile_organization_main_menu).height != "0px") {
+      mobile_organization_main_menu.style.height = "0px";
+      mobile_organization_menu_target.lastElementChild.style.transform = "rotate(0deg)";
+    }
+  }
+  // Activities & Notices
+  const mobile_activities_menu_target = document.getElementById("mobile-activities-menu-target");
+  const mobile_activities_main_menu = document.getElementById("mobile-activities-main-menu");
+  mobile_activities_menu_target.addEventListener("click", () => {
+    if (window.getComputedStyle(mobile_activities_main_menu).height == "0px") {
+      closeAboutMobileMenu();
+      closeMembershipMobileMenu();
+      closeOrganizationMobileMenu();
+      mobile_activities_main_menu.style.height = "fit-content";
+      mobile_activities_menu_target.lastElementChild.style.transform = "rotate(180deg)";
+    } else {
+      closeActivitiesMobileMenu();
+    }
+  });
+  function closeActivitiesMobileMenu() {
+    if (window.getComputedStyle(mobile_activities_main_menu).height != "0px") {
+      mobile_activities_main_menu.style.height = "0px";
+      mobile_activities_menu_target.lastElementChild.style.transform = "rotate(0deg)";
+    }
+  }
+
+  // Desktop Menu ===========================================
+  const about_menu_target = document.getElementById("about-menu-target");
+  const about_main_menu = document.getElementById("about-main-menu");
+  about_menu_target.addEventListener("mouseenter", openAboutMenu);
+  about_menu_target.addEventListener("mouseleave", closeAboutMenu);
+  function openAboutMenu() {
+    if (window.getComputedStyle(about_main_menu).display == "none") {
+      about_main_menu.style.display = "grid";
+    }
+  }
+  function closeAboutMenu() {
+    if (window.getComputedStyle(about_main_menu).display == "grid") {
+      about_main_menu.style.display = "none";
+    }
+  }
+  // membership-hover-menu
+  const membership_menu_target = document.getElementById("membership-menu-target");
+  const membership_main_menu = document.getElementById("membership-main-menu");
+  membership_menu_target.addEventListener("mouseenter", openMembershipMenu);
+  membership_menu_target.addEventListener("mouseleave", closeMembershipMenu);
+  function openMembershipMenu() {
+    if (window.getComputedStyle(membership_main_menu).display == "none") {
+      membership_main_menu.style.display = "grid";
+    }
+  }
+  function closeMembershipMenu() {
+    if (window.getComputedStyle(membership_main_menu).display == "grid") {
+      membership_main_menu.style.display = "none";
+    }
+  }
+  // organization-menu-target
+  const organization_menu_target = document.getElementById("organization-menu-target");
+  const organization_main_menu = document.getElementById("organization-main-menu");
+  organization_menu_target.addEventListener("mouseenter", openOrganizationMenu);
+  organization_menu_target.addEventListener("mouseleave", closeOrganizationMenu);
+  function openOrganizationMenu() {
+    if (window.getComputedStyle(organization_main_menu).display == "none") {
+      organization_main_menu.style.display = "grid";
+    }
+  }
+  function closeOrganizationMenu() {
+    if (window.getComputedStyle(organization_main_menu).display == "grid") {
+      organization_main_menu.style.display = "none";
+    }
+  }
+  // Activities and Notice
+  const activities_menu_target = document.getElementById("Activities-menu-target");
+  const activities_main_menu = document.getElementById("Activities-main-menu");
+  activities_menu_target.addEventListener("mouseenter", openActivitiesMenu);
+  activities_menu_target.addEventListener("mouseleave", closeActivitiesMenu);
+  function openActivitiesMenu() {
+    if (window.getComputedStyle(activities_main_menu).display == "none") {
+      activities_main_menu.style.display = "grid";
+    }
+  }
+  function closeActivitiesMenu() {
+    if (window.getComputedStyle(activities_main_menu).display == "grid") {
+      activities_main_menu.style.display = "none";
+    }
+  }
+</script>

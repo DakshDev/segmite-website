@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segmite Membership</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="shortcut icon" href="/images/fav_icon.webp" type="image/x-icon" />
+  </head>
+  <body>
+    <%- include("../components/header") %>
+    <div class="sm:px-6 p-2 py-6">
+      <main class="container mx-auto">
+        <!-- Current Page Navigate -->
+        <div class="p-4 shadow-sm rounded-sm bg-white flex gap-2 uppercase font-medium text-sm">
+          <a href="/" class="cursor-pointer hover:text-[#85082b]">Home</a> / <a href="/membership" class="cursor-pointer hover:text-[#85082b]">Membership</a> /
+          <a href="/membership/form" class="cursor-pointer hover:text-[#85082b]">Membership Form</a>
+        </div>
+        <!-- Form Content -->
+        <div class="bg-white rounded-sm p-4 mt-6">
+          <h1 class="text-[#85082b] font-semibold xl:text-2xl text-xl mb-6">Membership Form</h1>
+
+          <div class="grid lg:grid-cols-2 gap-5 content-start">
+            <form id="membership_form" class="space-y-6 text-sm">
+              <div class="space-y-2 text-sm">
+                <%- include("../components/input", { title: "Name (Prof. Dr. Engr.)", name: "fullname", placeholder: "Full Name", type: "text" }) %>
+
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+                  <%- include("../components/input", { title: "Highest qualification", name: "qualification", placeholder: "Enter your Qualification", type: "text" }) %>
+                  <!--  -->
+                  <%- include("../components/input", { title: "Specialization", name: "specialization", placeholder: "Enter your Specialization", type: "text" }) %>
+                </div>
+
+                <%- include("../components/input", { title: "Designation and organization", name: "designation", placeholder: "Enter your Designation & Organization", type: "text" }) %>
+                <!--  -->
+                <%- include("../components/input", { title: "Address", name: "address", placeholder: "Enter your Address", type: "text" }) %>
+
+                <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
+                  <%- include("../components/input", { title: "Email", name: "email", placeholder: "Enter your Email", type: "email" }) %>
+                  <!--  -->
+                  <%- include("../components/input", { title: "Cell", name: "cell", placeholder: "Enter your Cell Number", type: "text" }) %>
+                </div>
+              </div>
+              <!--  -->
+              <div>
+                <label class="block font-semibold text-[#333] mb-1">Tick the membership desired:</label>
+                <div class="grid grid-cols-1 gap-1 md:grid-cols-2">
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="radio" required name="membership" value="Student Member" class="mr-2" /> Student Member</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="radio" required name="membership" value="Member" class="mr-2" /> Member</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="radio" required name="membership" value="Corporate Member" class="mr-2" /> Corporate Member</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="radio" required name="membership" value="Life Member" class="mr-2" /> *Life Member</label>
+                </div>
+              </div>
+              <!--  -->
+              <div>
+                <label class="block font-semibold text-[#333] mb-1">Field(s) applicable:</label>
+                <div class="grid grid-cols-1 gap-1 md:grid-cols-2">
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Coal, oil & gas" class="mr-2" /> Coal, oil & gas</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Ore deposits" class="mr-2" /> Ore deposits</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Industrial rocks & minerals" class="mr-2" /> Industrial rocks & minerals</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Mining/quarrying" class="mr-2" /> Mining/quarrying</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Mineral processing/ metallurgy" class="mr-2" /> Mineral processing/ metallurgy</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Gemstones/ dimension stone" class="mr-2" /> Gemstones/ dimension stone</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Renewable energy" class="mr-2" /> Renewable energy</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Water/air pollution" class="mr-2" /> Water/air pollution</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Sea water intrusion" class="mr-2" /> Sea water intrusion</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Soil & ground water salinity" class="mr-2" /> Soil & ground water salinity</label>
+                  <label class="bg-gray-50 flex items-center px-2 py-1.5 rounded-sm border border-gray-300"><input type="checkbox" name="fields" value="Mineral based industries" class="mr-2" /> Mineral based industries</label>
+                  <label class="bg-gray-50 flex items-center rounded-sm overflow-hidden border border-gray-300">
+                    <input type="text" name="fields" placeholder="Any other ( Field applicable )" class="w-full rounded-sm text-sm px-2 py-1.5 h-full" />
+                  </label>
+                </div>
+              </div>
+              <!--  -->
+              <div class="space-y-2">
+                <div>
+                  <label class="block font-semibold text-[#333]"> I would like to offer my services in SEGMITE consultancy projects. If yes, give details of professional experience. </label>
+                  <textarea rows="4" required name="experience" placeholder="Enter Professional Experience" class="w-full rounded-sm border border-gray-300 focus:outline-gray-400 px-2 py-1.5 text-sm max-h-100 min-h-20 resize-none" maxlength="2000"></textarea>
+                </div>
+                <div>
+                  <label class="block font-semibold text-[#333]">Specific job(s) to be done</label>
+                  <textarea rows="4" name="jobs" required placeholder="Enter jobs to be done" class="w-full rounded-sm border border-gray-300 focus:outline-gray-400 px-2 py-1.5 text-sm resize-none" maxlength="2000"></textarea>
+                </div>
+
+                <div class="flex">
+                  <button id="submit-button" type="submit" class="rounded-sm bg-blue-600 px-4 py-2 text-white shadow hover:bg-blue-700 font-semibold flex justify-start items-center gap-2">
+                    <svg style="display: none" class="animate-spin text-white size-5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-circle-icon lucide-loader-circle">
+                      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                    </svg>
+
+                    Submit Membership Form
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <div class="max-lg:mt-10 h-fit text-sm leading-relaxed bg-gray-50 p-4 border border-gray-300 rounded-sm">
+              <h3 class="mb-2 font-semibold text-[16px]">Scope of SEGMITE & Membership Benefits</h3>
+              <p>Society of Economic Geologists & Mineral Technologists is a fast growing international technical NGO, founded in Peshawar in 1989 with the aim of promoting sustainable development of minerals, water, and renewable energy resources, related industries and protection of the environment. SEGMITE has Members, Student Members and Corporate Members and Life Members from throughout Pakistan and many other countries.</p>
+              <p class="mt-2">SEGMITE offers Membership to scientists and technologists engaged in research and teaching in the fields of Economic and Environmental Geology and applied sciences. Its Corporate Membership is open to those engaged in related industries or businesses.</p>
+              <p class="mt-2">SEGMITE Membership benefits include discount in the registration fee for the SEGMITE national and international events organized throughout the year in Pakistan. The Society arranges training opportunities to its Student members and provides technical services to the Corporate members.</p>
+              <p class="mt-2">The Society also publishes an Open Access, Quarterly, Peer reviewed, International Journal of Economic and Environmental Geology from University of Karachi. It is indexed in DOAJ, PASTIC, Google Scholar, BASE, Euro Pub Cross Ref DOI, ISI, ASI, SCI etc.</p>
+
+              <h3 class="mt-4 font-semibold text-[16px]">Annual Membership Fee</h3>
+              <p>
+                <span class="font-semibold">Pakistani</span>: Student Member: Rs.1000/-, Member: Rs. 2000/-, Corporate Member: Rs. 5000/-<br />
+                <span class="font-semibold">Foreigner</span>: Student Member: USD 50/-, Member USD 100/-, Corporate Member: USD 200/-
+              </p>
+              <p class="mt-2">
+                <span class="font-semibold">Membership</span> fee may be paid for <span class="font-semibold">one</span>, <span class="font-semibold">two</span> or
+                <span class="font-semibold">three</span>
+                years in a Single Installment by Cheque drawn in favor of SEGMITE or Online (Account #IBAN: PK90NBPA10810041 02771446) and mailed to the
+                <span class="font-semibold">Convener or Treasure</span> on the addresses given below.
+              </p>
+              <p class="mt-2">❖ Senior scientists and Engineers and other interested may join as Life Members by paying to SEGMITE Rs. 5,000/- (local) or USD. 200$ (foreigners), respectively. The Life Corporate Membership fee is Rs. 10,000/-</p>
+
+              <h3 class="mt-4 font-semibold text-[16px]">Contacts</h3>
+              <p>
+                <u>Prof. Dr.Viqar Husain</u><br />(Convener SEGMITE & Vice President AGID, Asia)<br />
+                Chief Editor: Int. J. Economic & Environmental Geology<br />
+                Department of Geology, University of Karachi, Pakistan<br />
+
+                <a href="mailto:segmiteinternational@gmail.com" target="_blank" class="text-blue-800 hover:underline">segmiteinternational@gmail.com</a>,
+                <a href="mailto:chiefeditor.ijeeg@uok.edu.pk" target="_blank" class="text-blue-800 hover:underline">chiefeditor.ijeeg@uok.edu.pk</a>
+              </p>
+
+              <p class="mt-2">
+                <u>Assoc. Prof. Suhail Anjum</u><br />(Treasurer SEGMITE)<br />
+                Department of Geology, Federal Urdu University Gulsahn Iqbal, Karachi, Pakistan<br />
+                <a href="mailto:anjum_52@hotmail.com" target="_blank" class="text-blue-800 hover:underline">anjum_52@hotmail.com</a>,
+                <a href="mailto:segmite@gmail.com" target="_blank" class="text-blue-800 hover:underline">segmite@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="sm:px-4 py-6 px-2 bg-[#333] mt-6">
+      <div class="container mx-auto flex justify-center items-center text-white">
+        <p class="text-center">© 2025 SEGMITE | All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Send Mail -->
+    <script>
+      const form = document.getElementById("membership_form");
+      const btn = document.getElementById("submit-button");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const fields = formData.getAll("fields");
+        const data = {
+          fullname: formData.get("fullname"),
+          qualification: formData.get("qualification"),
+          specialization: formData.get("specialization"),
+          designation: formData.get("designation"),
+          address: formData.get("address"),
+          email: formData.get("email"),
+          cell: formData.get("cell"),
+          membership: formData.get("membership"),
+          fields: formData.getAll("fields"),
+          experience: formData.get("experience"),
+          jobs: formData.get("jobs"),
+        };
+
+        if (data.fields.length === 0 || data.fields[0] === "") {
+          alert("Please select the Field(s) applicable !");
+          return;
+        }
+
+        btn.disabled = true;
+        btn.firstElementChild.style.display = "block";
+        fetch("/send_mail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => alert("🟢 Form successfully sent"))
+          .then((result) => {
+            console.log("Server response:", result);
+          })
+          .catch((err) => console.error(err))
+          .finally(() => {
+            btn.disabled = false;
+            btn.firstElementChild.style.display = "none";
+            window.location.href = "/";
+          });
+      });
+    </script>
+  </body>
+</html>

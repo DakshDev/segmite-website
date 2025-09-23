@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/fav_icon.webp" type="image/png" />
+    <title>Society of Economic Geologists & Mineral Technologists</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <%- include("../components/header") %>
+
+    <div class="sm:px-4 py-6 px-2">
+      <main class="container mx-auto">
+        <!-- Current Page Navigate -->
+        <div class="p-4 shadow-sm rounded-sm bg-white flex gap-2 uppercase font-medium text-sm">
+          <a href="/" class="cursor-pointer hover:text-[#85082b]">Home</a> /
+          <a href="/organization/editorial-board" class="cursor-pointer hover:text-[#85082b]">Editorial Board</a>
+        </div>
+        <!-- About Us -->
+        <div class="mt-6 bg-white rounded-sm md:p-8 p-4 shadow-xs">
+          <section id="brief-profile" class="brief-profile-section">
+            <h1 class="text-[#85082b] font-semibold xl:text-2xl text-xl mb-4">Editorial Board (SEGMITE).</h1>
+            <h2 class="text-lg font-semibold">Chief Editor</h2>
+            <p class="text-lg">Dr. Ananta Man Singh Pradhan</p>
+            <h3 class="font-semibold mt-2 text-lg">Editors</h3>
+            <div class="mt-4 grid gap-2">
+              <div><span>1.</span> <span>Dr. Upendra Baral</span>, <span>Managing Editor</span></div>
+              <div><span>2.</span> <span>Prof. Dr. Hyuch-Jin Park</span>, <span>Member</span></div>
+              <div><span>3.</span> <span>Dr. Netra Regmi</span>, <span>Member</span></div>
+              <div><span>4.</span> <span>Prof. Dr. Michael Murphy</span>, <span>Member</span></div>
+              <div><span>5.</span> <span>Dr. Ba-Phu Ngyuen</span>, <span>Member</span></div>
+              <div><span>6.</span> <span>Dr. Ying-Hsin WU</span>, <span>Member</span></div>
+              <div><span>7.</span> <span>Dr. Ramita Bajracharya</span>, <span>Member</span></div>
+              <div><span>8.</span> <span>Dr. Govinda Raj Adhikari</span>, <span>Member</span></div>
+              <div><span>9.</span> <span>Mr. Krishna Kumar Shrestha</span>, <span>Member</span></div>
+              <div><span>10.</span> <span>Dr. Gautam Prasad Khanal</span>, <span>Member</span></div>
+              <div><span>11.</span> <span>Dr. Bhupati Neupane</span>, <span>Member</span></div>
+              <div><span>12.</span> <span>Mr. Anoj Khanal</span>, <span>Member</span></div>
+              <div><span>13.</span> <span>Mr. Basant Bhandari</span>, <span>Member</span></div>
+              <div><span>14.</span> <span>Mr. Ajay Raj Adhikari</span>, <span>Member Secretary</span></div>
+            </div>
+          </section>
+          <%- include("../components/author") %>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <%- include("../components/footer") %>
+  </body>
+</html>

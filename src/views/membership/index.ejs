@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/fav_icon.webp" type="image/png" />
+    <title>Society of Economic Geologists & Mineral Technologists</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <%- include("../components/header") %>
+
+    <div class="sm:px-4 py-6 px-2">
+      <main class="container mx-auto">
+        <!-- Current Page Navigate -->
+        <div class="p-4 shadow-sm rounded-sm bg-white flex gap-2 uppercase font-medium text-sm">
+          <a href="/" class="cursor-pointer hover:text-[#85082b]">Home</a> /
+          <a href="/membership" class="cursor-pointer hover:text-[#85082b]">Membership</a>
+        </div>
+
+        <!-- About Us -->
+        <div class="mt-6 bg-white rounded-sm md:p-8 p-4 shadow-xs">
+          <section>
+            <h1 class="text-[#85082b] font-semibold xl:text-2xl text-xl mb-4">Membership Categories</h1>
+            <p id="student" class="font-semibold">Society of Economic Geologists & Mineral Technologists</p>
+            <p>SEGMITE has four categories of Memberships.</p>
+            <!-- Caetegories -->
+            <div class="grid gap-4 mt-6">
+              <div>
+                <h1 class="text-lg font-semibold">1. Student Member</h1>
+                <p id="member">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam maxime magnam ad minima rerum sint facilis, earum
+                  necessitatibus sapiente minus officia asperiores similique obcaecati officiis illum tempore quaerat dicta perspiciatis?
+                </p>
+              </div>
+              <div>
+                <h1 class="text-lg font-semibold">2. Member</h1>
+                <p id="corporate">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam maxime magnam ad minima rerum sint facilis, earum
+                  necessitatibus sapiente minus officia asperiores similique obcaecati officiis illum tempore quaerat dicta perspiciatis?
+                </p>
+              </div>
+              <div>
+                <h1 class="text-lg font-semibold">3. Corporate Member</h1>
+                <p id="life-member">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam maxime magnam ad minima rerum sint facilis, earum
+                  necessitatibus sapiente minus officia asperiores similique obcaecati officiis illum tempore quaerat dicta perspiciatis?
+                </p>
+              </div>
+              <div>
+                <h1 class="text-lg font-semibold">4. Life Member</h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam maxime magnam ad minima rerum sint facilis, earum
+                  necessitatibus sapiente minus officia asperiores similique obcaecati officiis illum tempore quaerat dicta perspiciatis?
+                </p>
+              </div>
+            </div>
+          </section>
+          <%- include("../components/author") %>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <%- include("../components/footer") %>
+  </body>
+</html>

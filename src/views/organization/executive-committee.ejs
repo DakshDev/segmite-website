@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/fav_icon.webp" type="image/png" />
+    <title>Society of Economic Geologists & Mineral Technologists</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <%- include("../components/header") %>
+
+    <div class="sm:px-4 py-6 px-2">
+      <main class="container mx-auto">
+        <!-- Current Page Navigate -->
+        <div class="p-4 shadow-sm rounded-sm bg-white flex gap-2 uppercase font-medium text-sm">
+          <a href="/" class="cursor-pointer hover:text-[#85082b]">Home</a> /
+          <a href="/organization/executive-committee" class="cursor-pointer hover:text-[#85082b]">executive-committee</a>
+        </div>
+        <!-- About Us -->
+        <div class="mt-6 bg-white rounded-sm md:p-8 p-4 shadow-xs">
+          <section id="brief-profile" class="brief-profile-section">
+            <h1 class="text-[#85082b] font-semibold xl:text-2xl text-xl mb-4">Executive Committee</h1>
+            <div id="diaplay_executive" class="grid gap-4">
+              <!-- <div class="sm:flex grid items-center gap-4">
+                <img src="/images/img.jpg" alt="img" class="sm:w-80 w-full h-50 object-cover object-center" />
+                <div>
+                  <h1 class="text-lg font-semibold capitalize">21st Executive Committee</h1>
+                  <p class="flex gap-2 text-sm font-semibold">
+                    SEGMITE
+                    <span class="flex gap-2 items-center font-medium"
+                      ><svg
+                        class="size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-clock-icon lucide-clock"
+                      >
+                        <path d="M12 6v6l4 2" />
+                        <circle cx="12" cy="12" r="10" />
+                      </svg>
+                      daye
+                    </span>
+                  </p>
+                  <p class="mt-2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis.
+                    Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.
+                  </p>
+                </div>
+              </div> -->
+            </div>
+          </section>
+          <%- include("../components/author") %>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <%- include("../components/footer") %>
+
+    <script>
+      const data = [
+        {
+          img: "/images/img.jpg",
+          title: "21st Executive Committee",
+          date: "25 4, 2021",
+          text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
+        },
+        {
+          img: "/images/img.jpg",
+          title: "20st Executive Committee",
+          date: "25 4, 2021",
+          text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
+        },
+        {
+          img: "/images/img.jpg",
+          title: "19st Executive Committee",
+          date: "25 4, 2021",
+          text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
+        },
+        {
+          img: "/images/img.jpg",
+          title: "18st Executive Committee",
+          date: "25 4, 2021",
+          text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
+        },
+        {
+          img: "/images/img.jpg",
+          title: "17st Executive Committee",
+          date: "25 4, 2021",
+          text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
+        },
+      ];
+      const diaplay_executive = document.getElementById("diaplay_executive");
+      data.forEach((each) => {
+        const html = `<div class="sm:flex grid items-center gap-4">
+<img src="${each.img}" alt="img" class="sm:w-80 w-full h-50 object-cover object-center rounded-sm" />
+<div>
+  <h1 class="text-lg font-semibold capitalize">${each.title}</h1>
+  <p class="flex gap-2 text-sm font-semibold">
+    SEGMITE
+    <span class="flex gap-2 items-center font-medium"
+      ><svg
+        class="size-4"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-clock-icon lucide-clock"
+      >
+        <path d="M12 6v6l4 2" />
+        <circle cx="12" cy="12" r="10" />
+      </svg>
+      ${each.date}
+    </span>
+  </p>
+  <p class="mt-2">${each.text}</p>
+</div>
+</div>`;
+        diaplay_executive.insertAdjacentHTML("beforeend", html);
+      });
+    </script>
+  </body>
+</html>
