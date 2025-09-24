@@ -5,9 +5,7 @@ import nodemailer from "nodemailer";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import { membershipRoute } from "./routes/member.route.js";
-import { aboutRoute } from "./routes/about.route.js";
 import { organizationRoute } from "./routes/organization.route.js";
-import { ActivitiesAndNoticesRoute } from "./routes/activities_and_notices.route.js";
 
 config();
 const app = express();
@@ -112,16 +110,15 @@ app.post("/send_message", async (req, res) => {
 });
 
 app.get("/", (_, res) => res.render("main"));
-app.use("/about", aboutRoute);
 app.use("/membership", membershipRoute);
 app.use("/organization", organizationRoute);
-app.use("/activities-and-notices", ActivitiesAndNoticesRoute);
-app.get("/activities", (_, res) => res.render("activities"));
+app.get("/activities-and-announcements", (_, res) => res.render("activities-and-announcements"));
+app.get("/past-activities", (_, res) => res.render("past-activities"));
 app.get("/journals", (_, res) => res.render("download/journals"));
-app.get("/past-events", (_, res) => res.render("past-events"));
-app.get("/videos", (_, res) => res.render("download/videos"));
 app.get("/publications", (_, res) => res.render("download/publications"));
 app.get("/contact", (_, res) => res.render("contact"));
+
+app.get("/empty", (_, res) => res.render("empty"));
 
 app.use((_, res) => {
   return res.status(404).send("<h1>Page Not Found</h1><a href='/'>Go Back</a>");

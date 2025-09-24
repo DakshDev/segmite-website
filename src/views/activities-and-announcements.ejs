@@ -15,12 +15,12 @@
         <!-- Current Page Navigate -->
         <div class="p-4 shadow-sm rounded-sm bg-white flex gap-2 uppercase font-medium text-sm">
           <a href="/" class="cursor-pointer hover:text-[#85082b]">Home</a> /
-          <a href="/activities" class="cursor-pointer hover:text-[#85082b]">ACTIVITIES / ANNOUNCEMENTS</a>
+          <a href="/activities-and-notices/recent-activities" class="cursor-pointer hover:text-[#85082b]">executive committee</a>
         </div>
         <!-- About Us -->
         <div class="mt-6 bg-white rounded-sm md:p-8 p-4 shadow-xs">
           <section id="brief-profile" class="brief-profile-section">
-            <h1 class="text-[#85082b] font-semibold xl:text-2xl text-xl mb-4">ACTIVITIES / ANNOUNCEMENTS</h1>
+            <h1 class="text-[#85082b] font-semibold xl:text-2xl text-xl mb-4">Recent Activities and Announcements</h1>
             <div id="diaplay_executive" class="grid gap-4"></div>
           </section>
           <%- include("./components/author") %>
@@ -34,26 +34,32 @@
     <script>
       const data = [
         {
-          img: "/images/img.jpg",
-          title: "21st Executive Committee",
+          img: "/images/img2.jpg",
+          title: "Talk Program Series, #NGS21-TP09",
           date: "25 4, 2021",
           text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
         },
         {
           img: "/images/img2.jpg",
-          title: "20st Executive Committee",
+          title: "Talk Program Series, #NGS21-TP08",
           date: "25 4, 2021",
           text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
         },
         {
           img: "/images/img2.jpg",
-          title: "19st Executive Committee",
+          title: "Webinar Series, #NGS21-WB01",
           date: "25 4, 2021",
           text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
         },
         {
-          img: "/images/img.jpg",
-          title: "18st Executive Committee",
+          img: "/images/img2.jpg",
+          title: "Talk Program Series, #NGS21-TP07",
+          date: "25 4, 2021",
+          text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
+        },
+        {
+          img: "/images/img2.jpg",
+          title: "IDDRR Day, 2024",
           date: "25 4, 2021",
           text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus repellendus, dolores unde nesciunt nostrum reiciendis. Minus sequi molestiae iusto tempora ut fugiat aspernatur alias, iste commodi cumque reprehenderit saepe dolores.",
         },
@@ -61,7 +67,7 @@
       const diaplay_executive = document.getElementById("diaplay_executive");
       data.forEach((each) => {
         const html = `<div class="sm:flex grid items-center gap-4">
-<img src="${each.img}" alt="img" class="sm:w-80 shrink-0 w-full h-50 object-cover object-center rounded-sm" />
+<img src="${each.img}" alt="img" class="sm:w-80 w-full h-50 object-cover object-center rounded-sm" />
 <div>
   <h1 class="text-lg font-semibold capitalize">${each.title}</h1>
   <p class="flex gap-2 text-sm font-semibold">
