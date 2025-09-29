@@ -1,9 +1,16 @@
-import express from "express";
-import "dotenv/config";
-import path from "path";
-import { membershipRoute } from "./routes/member.route.js";
-import { organizationRoute } from "./routes/organization.route.js";
-import { MailRoute } from "./routes/mail.route.js";
+// import express from "express";
+// import "dotenv/config";
+// import path from "path";
+// import { membershipRoute } from "./routes/member.route.js";
+// import { organizationRoute } from "./routes/organization.route.js";
+// import { MailRoute } from "./routes/mail.route.js";
+
+const express = require("express");
+require("dotenv").config();
+const path = require("path");
+const { membershipRoute } = require("./routes/member.route.js");
+const { organizationRoute } = require("./routes/organization.route.js");
+const { MailRoute } = require("./routes/mail.route.js");
 
 const app = express();
 const PORT = process.env.PORT || 3000;

@@ -1,4 +1,5 @@
-import { Router } from "express";
+// import { Router } from "express";
+const { Router } = require("express");
 
 const router = Router();
 
@@ -7,4 +8,5 @@ router.get("/executive-committee", (_, res) => res.render("organization/executiv
 router.get("/editorial-board", (_, res) => res.render("organization/editorial-board"));
 router.get("/sub-committee", (_, res) => res.render("organization/sub-committee"));
 
-export { router as organizationRoute };
+// export { router as organizationRoute };
+module.exports = { organizationRoute: router };

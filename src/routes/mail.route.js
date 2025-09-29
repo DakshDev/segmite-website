@@ -1,5 +1,8 @@
-import { Router } from "express";
-import nodemailer from "nodemailer";
+// import { Router } from "express";
+// import nodemailer from "nodemailer";
+
+const { Router } = require("express");
+const nodemailer = require("nodemailer");
 
 const router = Router();
 
@@ -95,4 +98,5 @@ router.post("/send_message", async (req, res) => {
   }
 });
 
-export { router as MailRoute };
+// export { router as MailRoute };
+module.exports = { MailRoute: router };

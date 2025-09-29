@@ -2,16 +2,15 @@
   "name": "app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "css": "npx @tailwindcss/cli -i ./src/css/style.css -o ./public/css/main.css --watch",
-    "start": "node src/index.js",
+    "start": "node loader.cjs",
     "dev": "concurrently \"npm run css\" \"npx nodemon\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
     "dotenv": "^17.2.1",
