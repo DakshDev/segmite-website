@@ -15,12 +15,12 @@ router.post("/send_mail", async (req, res) => {
 
     // Send Mail
     let transporter = nodemailer.createTransport({
-      service: "gmail",
-      port: 587,
+      service: "mail.segmiteinternational.com",
+      port: 465,
       secure: false,
       auth: {
-        user: "segmite.info@gmail.com", // your Gmail
-        pass: process.env.GMAIL_APP_PASSWORD, // generated app password
+        user: "form@segmiteinternational.com", // your Gmail
+        pass: process.env.FORM_PASSWORD, // generated app password
       },
     });
 
@@ -28,7 +28,7 @@ router.post("/send_mail", async (req, res) => {
 
     // mail options
     transporter.sendMail({
-      from: `SEGMITE <${data?.email}>`, // sender address
+      from: `form@segmiteinternational.com`, // sender address
       to: "segmite.info@gmail.com", // recipient
       subject: "Membership Form", // subject
       html: `<body style="width:100%;height:100%;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%"><div lang="en" style="background-color:#f6f6f6;padding:20px"><table width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%;height:100%;background-color:#f6f6f6"><tr><td valign="top" style="display:flex;justify-content:center"><table align="center" cellspacing="0" cellpadding="0" style="border-collapse:separate;background-color:#e5e0e0;width:100%;border-radius:10px;overflow:hidden;max-width:600px"><tr><td style="padding:0 0 20px 0"><table bgcolor="#6aa84f" align="center" cellspacing="0" cellpadding="0" style="border-collapse:collapse;background-color:#85082b;width:100%"><tr><td align="center" style="padding:30px 10px"><h3 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:28px;line-height:34px;font-weight:700;color:#fff">SEGMITE (Form)</h3></td></tr></table></td></tr><tr><td style="padding:0 10px 5px 10px"><table bgcolor="#f6f6f6" align="center" cellspacing="0" cellpadding="0" style="border-collapse:separate;width:100%;border:1px solid #ccc;border-radius:10px"><tr><td style="padding:10px"><h3 style="margin:0;font-family:Arial,Helvetica,sans-serif;line-height:20px;color:#333">Name (Prof. Dr. Engr.)</h3><p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:21px;color:#333">${
@@ -56,12 +56,12 @@ router.post("/send_message", async (req, res) => {
     const { fullname, email, subject, message } = req.body;
     // Send Mail
     let transporter = nodemailer.createTransport({
-      service: "gmail",
-      port: 587,
+      service: "mail.segmiteinternational.com",
+      port: 465,
       secure: false,
       auth: {
-        user: "segmite.info@gmail.com", // your Gmail
-        pass: process.env.GMAIL_APP_PASSWORD, // generated app password
+        user: "message@segmiteinternational.com", // your Gmail
+        pass: process.env.MESSAGE_PASSWORD, // generated app password
       },
     });
 
@@ -69,7 +69,7 @@ router.post("/send_message", async (req, res) => {
 
     // mail options
     transporter.sendMail({
-      from: `SEGMITE <${email}>`, // sender address
+      from: `message@segmiteinternational.com`, // sender address
       to: "segmite.info@gmail.com", // recipient
       subject: "Message Form", // subject
       html: `
